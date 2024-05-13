@@ -1,5 +1,23 @@
 package EmployeePayRollSystem;
 import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args){
+        PayRollSystem prs = new PayRollSystem();
+        FullTimeEmployee emp1 = new FullTimeEmployee("Bibek", 1, 70000);
+        PartTimeEmployee emp2 = new PartTimeEmployee("Piyush", 2, 40, 100);
+
+        prs.addEmployee(emp1);
+        prs.addEmployee(emp2);
+        System.out.println("Initial Employee Details: ");
+        prs.displayEmployees();
+        System.out.println("Removing Employees:");
+        prs.removeEmployee(2);
+        System.out.println("Employee Details:");
+        prs.displayEmployees();
+    }
+}
+
 //abstract class
 abstract class Employee{
     private String name;
@@ -95,22 +113,22 @@ class PayRollSystem{
     }
 }
 
-public class Main {
-    public static void main(String[] args){
-        PayRollSystem prs = new PayRollSystem();
-        FullTimeEmployee emp1 = new FullTimeEmployee("Bibek", 1, 70000);
-        PartTimeEmployee emp2 = new PartTimeEmployee("Piyush", 2, 40, 100);
+// public class Main {
+//     public static void main(String[] args){
+//         PayRollSystem prs = new PayRollSystem();
+//         FullTimeEmployee emp1 = new FullTimeEmployee("Bibek", 1, 70000);
+//         PartTimeEmployee emp2 = new PartTimeEmployee("Piyush", 2, 40, 100);
 
-        prs.addEmployee(emp1);
-        prs.addEmployee(emp2);
-        System.out.println("Initial Employee Details: ");
-        prs.displayEmployees();
-        System.out.println("Removing Employees:");
-        prs.removeEmployee(2);
-        System.out.println("Employee Details:");
-        prs.displayEmployees();
-    }
+//         prs.addEmployee(emp1);
+//         prs.addEmployee(emp2);
+//         System.out.println("Initial Employee Details: ");
+//         prs.displayEmployees();
+//         System.out.println("Removing Employees:");
+//         prs.removeEmployee(2);
+//         System.out.println("Employee Details:");
+//         prs.displayEmployees();
+//     }
 
 
 
-}
+// }
